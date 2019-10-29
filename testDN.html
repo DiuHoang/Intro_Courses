@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div >
+		<input id="username" type="text" name="">
+		<input id="password" type="password" name="">
+		<button onclick="logins()">login</button>
+	</div>
+	
+	<script type="text/javascript">
+		// var main = document.getElementById('main');
+		var arr = [{name: "diu", pass: 12345}];
+		
+
+		function logins(){
+		
+			var mainLogin = document.getElementById('main-login');
+			var h1 = document.createElement("h1");
+			h1.innerText = "LOG IN";
+			var inputUser = document.createElement("input");
+			inputUser.id = 'username';
+			inputUser.type = "text";
+			var inputPass = document.createElement("input");
+			inputPass.id = 'pass';
+			inputPass.type = "password";
+			var btnLogin = document.createElement("button");
+			btnLogin.innerText = "Login";
+
+			mainLogin.appendChild(h1);
+			mainLogin.appendChild(inputUser);
+			mainLogin.appendChild(inputPass);
+			mainLogin.appendChild(btnLogin);
+			
+				var names = document.getElementById('username').value;
+				var passes = document.getElementById('pass').value;
+				btnLogin.onclick = function(){
+					return function(){
+						alert('gd');
+						console.log(names);
+						console.log(passes);
+						for(var i = 0; i < logins.length; i++){
+							if(names === logins[i].name && passes === logins[i].password){
+							return true;
+							alert('fg');
+						// document.getElementById('main').style.display = "block";
+						// displayMain();
+						// document.getElementById('main-1').style.display = "none";
+						// document.getElementById('main-login').style.display = "none";
+						
+							}
+						}
+						
+					}
+				}
+			}
+	
+		}
+
+	</script>
+</body>
+</html>

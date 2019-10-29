@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="introCourses.css">
+</head>
+<body>
+	<div id="main-1">
+		<div><img src="cam-ket-gi.gif"></div>
+		<div>
+			<center>
+				<button onclick="login()">Log In</button>
+				<button onclick="register()">Register</button>
+			</center>
+		</div>
+	</div>
+	<div id="main-login"></div>
+	<div id="main-register"></div>
+	<div id="main"></div>
+	<script type="text/javascript">
+		var user1 = {name: "Diu", password: 12345}
+		var logins = [user1];
+		var arr =[];
+		function displayMain(){
+			var main = document.getElementById('main');
+			var h = document.createElement('h1');
+			h.innerHTML = "Main";
+			main.appendChild(h);
+		}
+		function login(){
+			var mainLogin = document.getElementById('main-login');
+			var h1 = document.createElement("h1");
+			h1.innerText = "LOG IN";
+			var inputUser = document.createElement("input");
+			inputUser.id = 'username';
+			inputUser.type = "text";
+			var inputPass = document.createElement("input");
+			inputPass.id = 'pass';
+			inputPass.type = "password";
+			var btnLogin = document.createElement("button");
+			btnLogin.innerText = "Login";
+
+			mainLogin.appendChild(h1);
+			mainLogin.appendChild(inputUser);
+			mainLogin.appendChild(inputPass);
+			mainLogin.appendChild(btnLogin);
+			
+				var names = document.getElementById('username').value;
+				var passes = document.getElementById('pass').value;
+				btnLogin.onclick = function(){
+					return function(){
+						alert('gd');
+						console.log(names);
+						console.log(passes);
+						for(var i = 0; i < logins.length; i++){
+							if(names === logins[i].name && passes === logins[i].password){
+							return true;
+							alert('fg');
+						// document.getElementById('main').style.display = "block";
+						// displayMain();
+						// document.getElementById('main-1').style.display = "none";
+						// document.getElementById('main-login').style.display = "none";
+						
+							}
+						}
+						
+					}
+				}
+			}
+	
+		// function register(){
+		// 	var mainRegister = document.getElementById('main-register');
+		// 	var h1 = document.createElement("h1");
+		// 	h1.innerText = "REGISTER";
+		// 	var inputUser = document.createElement("input");
+		// 	inputUser.id = 'username';
+		// 	inputUser.type = "text";
+
+		// 	var inputAge = document.createElement("input");
+		// 	inputAge.id = 'age';
+		// 	inputAge.type = "text"; 
+			
+
+		// 	var inputAddress = document.createElement("input");
+		// 	inputAddress.id = 'adress';
+		// 	inputAddress.type = "text"; 
+		
+
+		// 	var inputPass = document.createElement("input");
+		// 	inputPass.id = 'pass';
+		// 	inputPass.type = "password";
+			
+
+		// 	var btnRegister = document.createElement("button");
+		// 	btnRegister.innerText = "Register";
+
+		// 	mainRegister.appendChild(h1);
+		// 	mainRegister.appendChild(inputUser);
+		// 	mainRegister.appendChild(inputAge);
+		// 	mainRegister.appendChild(inputAddress);
+		// 	mainRegister.appendChild(inputPass);
+		// 	mainRegister.appendChild(btnRegister);
+			
+			
+		// 	for(var i = 0; i < arr.length; i++){
+		// 		var user = document.getElementById('username').value;
+		// 	var age = document.getElementById('age').value;
+		// 	var address = document.getElementById('address').value;
+		// 	var pass = document.getElementById('pass').value;
+
+		// 	var obj = {name: user, age: age, address: address, pass: pass};
+		// 	arr.push(obj);
+		// 		btnRegister.onclick = function(arg){
+		// 		return function(){
+		// 			alert('gfg');
+		// 			if(user == ''){
+		// 				alert('Ban chau nhap ten');
+		// 				return false;
+		// 			}
+		// 			if(age == ''){
+		// 				alert('Ban chau nhap tuoi');
+		// 				return false;
+		// 			}
+		// 			if(address == ''){
+		// 				alert('Ban chau nhap dia chi');
+		// 				return false;
+		// 			}
+		// 			if(pass == ''){
+		// 				alert('Ban chau nhap mat khau');
+		// 				return false;
+		// 			}
+		// 			alert('dang ki thanh cong');
+		// 			return true;
+		// 			}
+		// 		}(i);
+		// 	}
+			
+		// }
+	</script>
+</body>
+</html>
