@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="introCourses.css">
+</head>
+<body>
+		<img src="./Image/body3.jpg" class="image-logo">
+		<div class="div-main-header">
+			<div><h2><img src="./Image/list.png">DANH MUC</h2></div>
+			<div><input type="text" name="" placeholder="Search">
+			<button>Search</button></div>
+			<div><button>DANG KI</button></div>
+		</div>
+		<div class="div-main-list">
+			<img src="./Image/home.png">
+			<a href="#"><b>ENGLISH</b></a>
+			<a href="#"><b>MARKETING</b></a>
+			<a href="#"><b>SKILL</b></a>
+			<a href="#"><b>PRESENTATION</b></a>
+		</div>
+		<div id="main-content">
+			<!-- <div id="product1"></div>
+			<div id="product2"></div>
+			<div id="product3"></div>
+			<div id="product4"></div>
+			<div id="product5"></div>
+			<div id="product6"></div> -->
+		</div>
+		<div class="div-main-footer">
+			<img id="myImage" src="./Image/learn1.jpg">
+		</div>
+		<script type="text/javascript">
+			var prod1 = { 
+				img: "./Image/El1.jpg", 
+				name: "Anh văn giao tiếp cho người hoàn toàn mất gốc", 
+				price: 249000
+			}
+			var prod2 = { 
+				img: "./Image/El2.jpg", 
+				name: "5 bí quyết “vàng” để dịch câu tiếng Anh chuẩn xác mà bạn nên biết", 
+				price: 249000
+			}
+			var prod3 = { 
+				img: "./Image/mar1.jpg", 
+				name: "Chiến lược Marketing dịch vụ hoàn hảo", 
+				price: 249000
+			}
+			var prod4 = { 
+				img: "./Image/mar2.png", 
+				name: "Tuyệt chiêu “hút” khách đỉnh cao từ kỹ năng viết Content Marketing", 
+				price: 249000
+			}
+			var prod5 = { 
+				img: "./Image/skill1.jpg", 
+				name: "Bí quyết luyện giọng thành công", 
+				price: 249000
+			}
+			var prod6 = { 
+				img: "./Image/skill2.jpg", 
+				name: "Quản trị cảm xúc", 
+				price: 249000
+			}
+			var prodArr = [prod1, prod2, prod3, prod4, prod5, prod6];
+			displayMain();
+			function displayMain(){
+				var main = document.getElementById('main-content');
+				for(var i = 0; i < prodArr.length; i++){
+					var divMain = document.createElement('div');
+					var imgObj = document.createElement('img');
+					imgObj.src = prodArr[i].img;
+					var nameObj = document.createElement('h3');
+					nameObj.innerText = prodArr[i].name;
+					var priceObj = document.createElement('p');
+					priceObj.innerText = prodArr[i].price + 'đ';
+					var btnDetail = document.createElement("button");
+					btnDetail.innerText = "Chi tiết";
+
+					divMain.className = "div-main-content-list";
+					divMain.appendChild(imgObj);
+					divMain.appendChild(nameObj);
+					divMain.appendChild(priceObj);
+					divMain.appendChild(btnDetail);
+					main.className = "div-main-content";
+					main.appendChild(divMain);
+				}
+			}
+		</script>
+</body>
+</html>
