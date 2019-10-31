@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div >
+		<input id="username" type="text" name="">
+		<input id="password" type="password" name="">
+		<button onclick="logins()">login</button>
+	</div>
+	
+	<script type="text/javascript">
+		// var main = document.getElementById('main');
+		var arr = [{name: "diu", pass: 12345}];
+		
+
+		function logins(){
+			
+			var user = document.getElementById('username').value;
+			var pass = document.getElementById('password').value;
+			for(var i = 0; i < arr.length; i++){
+				if(user == arr[i].name && pass == arr[i].pass){
+					alert('thanh cong');
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>
