@@ -138,7 +138,6 @@ function displayDetail(arg) {
             var objArr = {image: prodArr[arg].image, name: prodArr[arg].name, price: prodArr[arg].price + 'đ'};
             listArr.push(objArr);
             console.log(listArr);
-            displayDetail();
         }
     }(arg)
     divDetail.className = "div-main-content-list";
