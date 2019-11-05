@@ -59,7 +59,6 @@ function logins() {
     })}
 }
 function registers() {
-    arrLocal = localInfo;
     var user = document.getElementById('username').value;
     var age = document.getElementById('age').value;
     var address = document.getElementById('address').value;
@@ -73,6 +72,7 @@ function registers() {
     console.log(username);
     console.log(pass);
     localStorage.setItem("localInfo",JSON.stringify(arrLocal));
+    arrLocal = localInfo;
     if (username == "" || age == "" || address == "" || pass == "") {
         alert('Vui lòng nhập đầy đủ thông tin');
         return false;
